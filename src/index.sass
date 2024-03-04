@@ -1,0 +1,53 @@
+html, body, #root
+  width: 100vw
+  height: 100vh
+
+*
+  margin: 0
+  padding: 0
+  position: relative
+  box-sizing: border-box
+
+#root
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+
+button:not(:disabled)
+  cursor: pointer
+
+.page
+  display: flex
+  flex-direction: column
+  overflow-y: scroll
+
+  .header
+    display: flex
+    position: sticky
+    top: 0
+    gap: 10px
+    padding: 10px
+    background: #aaa
+    z-index: 1
+
+    .title
+      flex-grow: 1
+      display: flex
+      gap: 10px
+
+    .brands
+      width: 200px
+
+  .content
+    flex-grow: 1
+
+    .items
+      justify-content: center
+
+      .item
+        display: flex
+        flex-direction: column
+        border: 1px solid #999
+        border-radius: 5px
+        padding: 10px
+        margin: 5px
