@@ -32,7 +32,6 @@ export const App = () => {
     [ids]
   );
 
-  // Поля для фильтров
   const [brands, loadingBrands, errorBrands] = useAsync(
     () =>
       api.action("get_fields", {

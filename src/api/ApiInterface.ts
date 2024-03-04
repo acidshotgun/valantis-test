@@ -1,16 +1,20 @@
 export interface ApiInterface {
   get_ids: {
-    params: [data?: {
-      offset: number;
-      limit: number;
-    }];
+    params: [
+      data?: {
+        offset: number;
+        limit: number;
+      }
+    ];
     result: string[];
   };
 
   get_items: {
-    params: [data: {
-      ids: string[];
-    }];
+    params: [
+      data: {
+        ids: string[];
+      }
+    ];
     result: {
       id: string;
       brand: string | null;
@@ -20,18 +24,22 @@ export interface ApiInterface {
   };
 
   get_fields: {
-    params: [data?: {
-      field: string;
-      offset: number;
-      limit: number;
-    }];
+    params: [
+      data?: {
+        field?: string;
+        offset?: number;
+        limit?: number;
+      }
+    ];
     result: any[];
   };
 
   filter: {
-    params: [data: {
-      [key: string]: any;
-    }];
+    params: [
+      data: {
+        [key: string]: any;
+      }
+    ];
     result: string[];
   };
 }
